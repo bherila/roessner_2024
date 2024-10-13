@@ -59,7 +59,7 @@ export default function Home() {
                             </CarouselItem>)}
                     </CarouselContent>
                 </Carousel>
-                <nav className="flex justify-center mt-4">
+                <nav className="flex justify-center mt-4 hidden">
                     <button
                         className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-l"
                         onClick={() => { if (activeIndex > 0) setActiveIndex(activeIndex - 1)}}
