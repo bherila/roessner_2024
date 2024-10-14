@@ -1,2 +1,1 @@
-
-export const hColor = "text-amber-400";
+export const hColor = "text-amber-500";
