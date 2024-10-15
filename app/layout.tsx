@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Container from "@/components/Container";
 
@@ -7,6 +7,16 @@ export const metadata: Metadata = {
   description: "",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 0.7,
+  viewportFit: "contain",
+  maximumScale: 1,
+  userScalable: false,
+  // Also supported by less commonly used
+  // interactiveWidget: 'resizes-visual',
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -14,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className="antialiased h-screen flex flex-col">
         <Container>{children}</Container>
       </body>
     </html>

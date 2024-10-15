@@ -1,11 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import useCarouselHelpers from "@/app/useCarouselHelpers";
 import { allItems, indexOfSectionStart, sections } from "@/lib/RoessnerSlides";
 import { SectionHeaderRow } from "@/components/SectionHeaderRow";
 import Footer from "@/components/Footer";
+
+const intervalTime = 4000;
 
 export default function Home() {
   const { setActiveIndex, activeIndex, setApi } = useCarouselHelpers();
@@ -13,11 +15,25 @@ export default function Home() {
   const handleSectionClick = (sectionName: string) => {
     console.info("Click", sectionName);
     setActiveIndex(indexOfSectionStart(sectionName));
+    setIsTimerActive(true);
   };
+
+  const [isTimerActive, setIsTimerActive] = useState(true);
+  useEffect(() => {
+    const intervalId = setTimeout(() => {
+      if (isTimerActive) {
+        setActiveIndex((activeIndex + 1) % allItems.length);
+      }
+    }, intervalTime);
+
+    return () => {
+      clearTimeout(intervalId);
+    };
+  }, [intervalTime, activeIndex]);
 
   return (
     <>
-      <div className="hidden lg:block mx-auto" style={{ width: "1300px" }}>
+      <div className="hidden lg:block mx-auto my-auto" style={{ width: "1300px" }}>
         <section style={{ width: "100%", height: "360px", position: "relative", overflow: "visible", zIndex: 0 }}>
           <div
             className="text-nowrap"
@@ -71,6 +87,7 @@ export default function Home() {
               onClick={() => {
                 if (activeIndex > 0) setActiveIndex(activeIndex - 1);
                 else setActiveIndex(allItems.length - 1);
+                setIsTimerActive(false);
               }}
             >
               &laquo;
@@ -83,6 +100,7 @@ export default function Home() {
               onClick={() => {
                 if (activeIndex < allItems.length - 1) setActiveIndex(activeIndex + 1);
                 else setActiveIndex(0);
+                setIsTimerActive(false);
               }}
             >
               &raquo;

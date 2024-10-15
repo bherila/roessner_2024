@@ -13,14 +13,14 @@ export function SectionHeaderRow({
   className?: string;
 }) {
   return (
-    <section className={cn(!isMain && "flex flex-row w-full", className)}>
+    <section className={cn(!isMain && "w-full", className)}>
       {/* Sections */}
       <div
         className={cn(
-          "flex justify-between items-center mt-8",
-          !isMain && "sm:mt-16 pb-4 sm:pb-8 bg-black text-xs",
+          "mt-8",
+          !isMain && "pb-4 bg-black text-xl text-center",
         )}
-        style={isMain ? { fontSize: "17px", letterSpacing: "-1px", fontStretch: "ultra-condensed" } : {}}
+        style={isMain ? { fontSize: "17px", fontStretch: "condensed" } : { letterSpacing:'1px'}}
       >
         {sections.map((section, index) => (
           <span key={index}>

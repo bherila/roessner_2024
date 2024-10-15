@@ -12,6 +12,17 @@ const config: Config = {
 		fontFamily: {
 			'open-sans': ['"Open Sans"', 'sans-serif'],
 		},
+      screens: {
+        'sm': '640px',
+        // => @media (min-width: 640px) { ... }
+
+        'md': '768px',
+        // => @media (min-width: 768px) { ... }
+
+        'lg': '1300px',
+        // => @media (min-width: 1024px) { ... }
+
+      },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
