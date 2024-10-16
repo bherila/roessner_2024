@@ -16,18 +16,19 @@ export function SectionHeaderRow({
     <section className={cn(!isMain && "w-full", className)}>
       {/* Sections */}
       <div
-        className={cn(
-          "mt-8",
-          !isMain && "pb-4 bg-black text-xl text-center",
-        )}
-        style={isMain ? { fontSize: "17px", fontStretch: "condensed" } : { letterSpacing:'1px'}}
+        className={cn("mt-6", !isMain && "pb-4 bg-black text-xl text-center")}
+        style={
+          isMain
+            ? { fontSize: "18px", fontStretch: "condensed", letterSpacing: "1.1px" }
+            : { letterSpacing: "1px" }
+        }
       >
         {sections.map((section, index) => (
           <span key={index}>
             <a
               href={`#${section.name}`}
               onClick={() => handleSectionClick(section.name)}
-              className={cn("py-2", hColor, "uppercase font-bold hover:text-white")}
+              className={cn("py-2", hColor, "uppercase font-medium hover:text-white")}
             >
               {section.name}
             </a>
