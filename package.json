@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write app components lib"
+    "prettier": "prettier --write app components lib",
+    "upload": "rsync -a --progress ./out/ roessner@web1.dal.cloudplatform.net:~/public_html"
   },
   "dependencies": {
     "@fontsource/open-sans": "^5.1.0",
