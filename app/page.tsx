@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <>
       <div className="hidden lg:block mx-auto my-auto" style={{ width: "1300px" }}>
-        <section style={{ width: "100%", height: "342px", position: "relative", overflow: "visible", zIndex: 0 }}>
+        <section style={{ width: "100%", height: "336px", position: "relative", overflow: "visible", zIndex: 0 }}>
           <div
             className="text-nowrap pl-20"
             style={{ position: "absolute", top: 0, display: "block", zIndex: 2 }}

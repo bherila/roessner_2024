@@ -9,7 +9,7 @@ export function generateStaticParams() {
 
 export default function Page({ params }: { params: { name: string } }) {
   return (
-    <>
+    <div className="w-full lg:w-2/3 lg:mx-auto lg:py-2">
       <GoBackLink
         href={"/?index=" + allItems.findIndex((item) => item.imageURI === params.name)}
         className={cn("bg-white", "block")}
@@ -20,6 +20,6 @@ export default function Page({ params }: { params: { name: string } }) {
           className={cn("w-full", "border-4", "border-gray-400")}
         />
       </GoBackLink>
-    </>
+    </div>
   );
 }
