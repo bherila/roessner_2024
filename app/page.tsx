@@ -40,15 +40,15 @@ export default function Home() {
 
   return (
     <>
-      <div className="hidden lg:block mx-auto my-auto" style={{ width: "1300px" }}>
-        <section style={{ width: "100%", height: "336px", position: "relative", overflow: "visible", zIndex: 0 }}>
+      <div className="hidden lg:block my-auto mx-auto" style={{ width: "1300px" }}>
+        <section style={{ width: "100%", height: "330px", position: "relative", overflow: "visible", zIndex: 0 }}>
           <div
-            className="text-nowrap pl-20"
+            className="text-nowrap pl-24"
             style={{ position: "absolute", top: 0, display: "block", zIndex: 2 }}
           >
             <h1
               className={`pt-9 font-bold uppercase text-nowrap text-amber-500`}
-              style={{ letterSpacing: "1px", scale: "1 0.9", fontSize: "36px" }}
+              style={{ letterSpacing: "1px", scale: "1 0.85", fontSize: "36px" }}
             >
               Roessner &amp; Co.
             </h1>
@@ -64,7 +64,7 @@ export default function Home() {
             <img
               src="/images/logo2_bg_cropped.webp"
               alt="Roessner & Co. Logo"
-              style={{ width: "650px", height: "444px" }}
+              style={{ width: "650px", height: "429px" }}
             />
           </div>
         </section>
@@ -121,7 +121,7 @@ export default function Home() {
 
       {/* Mobile */}
 
-      <section className="flex lg:hidden w-screen">
+      <section className="lg:hidden w-screen px-2 pt-2">
         <img
           src="/images/roessner_email_00.webp"
           alt="The source for quality graphic design and creative services for print, online and video projects."
@@ -129,7 +129,7 @@ export default function Home() {
         />
       </section>
 
-      <div className="lg:hidden px-4 py-2">
+      <div className="lg:hidden px-2 py-2">
         {sections.map((section, sectionIndex) => (
           <div key={sectionIndex} className="">
             <a id={section.name} />
@@ -145,9 +145,7 @@ export default function Home() {
             ))}
           </div>
         ))}
-        <div className="pt-10">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </>
   );

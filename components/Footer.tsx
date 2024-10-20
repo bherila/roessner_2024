@@ -5,18 +5,19 @@ import { hColor } from "@/lib/RoessnerStyle";
 export default function Footer() {
   return (
     <>
-      <section className="flex md:hidden flex-row w-screen -mx-4 -my-10">
+      <section className="lg:hidden w-screen px-2 -mx-2 -my-2">
         <img src="/images/roessner_email_01.webp" alt="" className="w-full" />
       </section>
       <footer
         className={cn(
           "flex",
-          "bg-white text-white lg:text-xl lg:tracking-widest",
-          "lg:bg-black -mx-4 lg:mx-0 -mb-2 lg:-mb-0",
-          "pt-6 px-4 lg:px-20",
+          "bg-black text-white lg:text-xl lg:tracking-widest",
+          "lg:bg-black -mx-2 lg:mx-0 -mb-2 lg:-mb-0",
+          "-mt-2 pb-2 lg:pt-8 lg:pb-0 px-4 lg:px-24",
         )}
+        style={{ fontSize: "13pt" }}
       >
-        <div className="flex-1 flex justify-start">
+        <div className="hidden lg:flex-1 lg:flex lg:justify-start">
           <div className="hidden lg:block text-nowrap">
             <i className={cn(hColor)}>Call:</i>
             <a href="tel:908-963-0983" className="text-white px-2">
@@ -30,7 +31,10 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="text-black lg:text-gray-300 italic text-xs pt-4 lg:pt-1 leading-loose">
+        <div
+          className="text-gray-300 lg:text-black pl-4 lg:pl-0 lg:pr-4 lg:text-gray-300 italic pt-4 lg:pt-1 leading-loose"
+          style={{ fontSize: "8pt" }}
+        >
           All content &copy; Roessner & Co.
         </div>
       </footer>
