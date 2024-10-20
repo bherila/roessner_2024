@@ -131,11 +131,11 @@ export default function Home() {
 
       <div className="lg:hidden px-2 py-2">
         {sections.map((section, sectionIndex) => (
-          <div key={sectionIndex} className="">
+          <div key={sectionIndex}>
             <a id={section.name} />
             {/*<SectionHeaderRow isMain={false} {...{ handleSectionClick }} />*/}
             {section.images.map((imageURI, imageIndex) => (
-              <a key={`${sectionIndex}.${imageIndex}`} href={"/slide/" + imageURI}>
+              <a key={`${sectionIndex}.${imageIndex}`} href={"/slide/" + imageURI} className="block bg-white">
                 <img
                   src={"/images/slides/" + imageURI}
                   alt={imageURI}
