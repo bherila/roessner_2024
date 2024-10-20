@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        "open-sans": ['"Open Sans"', "sans-serif"],
+        sans: ['var(--font-open-sans)']
       },
       screens: {
         sm: "640px",

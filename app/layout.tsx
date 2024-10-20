@@ -1,6 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Container from "@/components/Container";
+import { Open_Sans } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans",
+  weight: ["300", "400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
+});
 
 export const metadata: Metadata = {
   title: "Roessner & Co.",
@@ -12,7 +21,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   viewportFit: "contain",
   maximumScale: 1,
-  userScalable: false,
+  userScalable: true,
   // Also supported by less commonly used
   // interactiveWidget: 'resizes-visual',
 };
@@ -24,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased h-screen flex flex-col">
+      <body className={cn(openSans.variable, "antialiased", "h-screen", "flex", "flex-col", "font-sans")}>
         <Container>{children}</Container>
       </body>
     </html>
