@@ -41,13 +41,13 @@ export default function Home() {
   return (
     <>
       <div className="hidden lg:block mx-auto my-auto" style={{ width: "1300px" }}>
-        <section style={{ width: "100%", height: "360px", position: "relative", overflow: "visible", zIndex: 0 }}>
+        <section style={{ width: "100%", height: "342px", position: "relative", overflow: "visible", zIndex: 0 }}>
           <div
             className="text-nowrap pl-20"
             style={{ position: "absolute", top: 0, display: "block", zIndex: 2 }}
           >
             <h1
-              className={`pt-16 font-bold uppercase text-nowrap text-amber-500`}
+              className={`pt-9 font-bold uppercase text-nowrap text-amber-500`}
               style={{ letterSpacing: "1px", scale: "1 0.9", fontSize: "36px" }}
             >
               Roessner &amp; Co.
@@ -60,7 +60,7 @@ export default function Home() {
             </div>
             <SectionHeaderRow isMain={true} {...{ handleSectionClick }} />
           </div>
-          <div style={{ position: "absolute", right: "2cm", top: "18px", zIndex: 1 }}>
+          <div style={{ position: "absolute", right: "2cm", top: "0px", zIndex: 1 }}>
             <img
               src="/images/logo2_bg_cropped.webp"
               alt="Roessner & Co. Logo"
@@ -139,7 +139,7 @@ export default function Home() {
                 <img
                   src={"/images/slides/" + imageURI}
                   alt={imageURI}
-                  className="border-2 border-gray-600 mb-2 bg-white"
+                  className="border-2 border-gray-500 mb-2 bg-white"
                 />
               </a>
             ))}
