@@ -121,7 +121,7 @@ export default function Home() {
 
       {/* Mobile */}
 
-      <section className="lg:hidden w-screen px-2 pt-2">
+      <section className="lg:hidden w-screen px-2 pt-2 -mb-2">
         <img
           src="/images/roessner_email_00.webp"
           alt="The source for quality graphic design and creative services for print, online and video projects."
