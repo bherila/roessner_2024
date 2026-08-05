@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "prettier": "prettier --write app components lib",
     "upload": "rsync -a --progress ./out/ roessner@web1.dal.cloudplatform.net:~/public_html"
   },
@@ -17,7 +17,7 @@
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.3.0",
     "lucide-react": "^0.447.0",
-    "next": "14.2.14",
+    "next": "16.3.0",
     "next-image-export-optimizer": "^1.15.1",
     "react": "^18",
     "react-dom": "^18",
@@ -28,11 +28,15 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.14",
-    "postcss": "^8",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "16.3.0",
+    "postcss": "^8.5.25",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "overrides": {
+    "postcss": "$postcss",
+    "sharp": "0.35.3"
   }
 }

@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: "export",
-    export: {
-        ignore: ['*.pdf'],
-    },
     images: {
         loader: "custom",
         imageSizes: [40,180,400,1080,2048],
